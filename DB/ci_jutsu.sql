@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2021 at 02:39 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.5
+-- Waktu pembuatan: 10 Jun 2022 pada 11.31
+-- Versi server: 10.1.37-MariaDB
+-- Versi PHP: 5.6.39
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_anggota`
+-- Struktur dari tabel `tbl_anggota`
 --
 
 CREATE TABLE `tbl_anggota` (
@@ -34,7 +35,7 @@ CREATE TABLE `tbl_anggota` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tbl_anggota`
+-- Dumping data untuk tabel `tbl_anggota`
 --
 
 INSERT INTO `tbl_anggota` (`id`, `nama_depan`, `nama_belakang`) VALUES
@@ -53,7 +54,7 @@ INSERT INTO `tbl_anggota` (`id`, `nama_depan`, `nama_belakang`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_barang`
+-- Struktur dari tabel `tbl_barang`
 --
 
 CREATE TABLE `tbl_barang` (
@@ -63,7 +64,7 @@ CREATE TABLE `tbl_barang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_barang`
+-- Dumping data untuk tabel `tbl_barang`
 --
 
 INSERT INTO `tbl_barang` (`id`, `nama_barang`, `gambar`) VALUES
@@ -77,7 +78,7 @@ INSERT INTO `tbl_barang` (`id`, `nama_barang`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_kabupaten`
+-- Struktur dari tabel `tbl_kabupaten`
 --
 
 CREATE TABLE `tbl_kabupaten` (
@@ -87,7 +88,7 @@ CREATE TABLE `tbl_kabupaten` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_kabupaten`
+-- Dumping data untuk tabel `tbl_kabupaten`
 --
 
 INSERT INTO `tbl_kabupaten` (`id_kab`, `id_prov`, `nama_kab`) VALUES
@@ -99,7 +100,7 @@ INSERT INTO `tbl_kabupaten` (`id_kab`, `id_prov`, `nama_kab`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_karyawan`
+-- Struktur dari tabel `tbl_karyawan`
 --
 
 CREATE TABLE `tbl_karyawan` (
@@ -109,7 +110,7 @@ CREATE TABLE `tbl_karyawan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_karyawan`
+-- Dumping data untuk tabel `tbl_karyawan`
 --
 
 INSERT INTO `tbl_karyawan` (`id`, `nik`, `nama`) VALUES
@@ -119,12 +120,14 @@ INSERT INTO `tbl_karyawan` (`id`, `nik`, `nama`) VALUES
 (4, 'KR2003260001', 'Zulfikar Fadly'),
 (5, 'KR2003270001', 'David Bramantio'),
 (6, 'KR2003270002', 'Shahrukhan'),
-(7, 'KR2003300001', 'Budi Mulyono');
+(7, 'KR2003300001', 'Budi Mulyono'),
+(8, 'KR2203260001', 'Munawar Ahmad'),
+(9, 'KR2206100001', 'fffdf');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_kecamatan`
+-- Struktur dari tabel `tbl_kecamatan`
 --
 
 CREATE TABLE `tbl_kecamatan` (
@@ -134,7 +137,7 @@ CREATE TABLE `tbl_kecamatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_kecamatan`
+-- Dumping data untuk tabel `tbl_kecamatan`
 --
 
 INSERT INTO `tbl_kecamatan` (`id_kec`, `id_kab`, `nama_kec`) VALUES
@@ -150,7 +153,7 @@ INSERT INTO `tbl_kecamatan` (`id_kec`, `id_kab`, `nama_kec`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_member`
+-- Struktur dari tabel `tbl_member`
 --
 
 CREATE TABLE `tbl_member` (
@@ -161,7 +164,7 @@ CREATE TABLE `tbl_member` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_member`
+-- Dumping data untuk tabel `tbl_member`
 --
 
 INSERT INTO `tbl_member` (`id`, `nama`, `alamat`, `email`) VALUES
@@ -1170,7 +1173,7 @@ INSERT INTO `tbl_member` (`id`, `nama`, `alamat`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mhs`
+-- Struktur dari tabel `tbl_mhs`
 --
 
 CREATE TABLE `tbl_mhs` (
@@ -1183,7 +1186,7 @@ CREATE TABLE `tbl_mhs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_mhs`
+-- Dumping data untuk tabel `tbl_mhs`
 --
 
 INSERT INTO `tbl_mhs` (`id`, `nim`, `nama`, `alamat`, `no_telp`, `tanggal_daftar`) VALUES
@@ -1193,12 +1196,38 @@ INSERT INTO `tbl_mhs` (`id`, `nim`, `nama`, `alamat`, `no_telp`, `tanggal_daftar
 (4, '1201068', 'Zulfikar Fadly', 'Parung, Bogor', '081234003498', '2012-05-21'),
 (41, '1201113', 'Muhammad Husein', 'Tangkit Baru', '082293004953', '2012-05-21'),
 (43, '1201112', 'Azwar Anas', 'Telanai', '081233940594', '2012-05-23'),
-(51, '1201023', 'Ferry', 'Thehok', '081293948399', '2012-04-09');
+(52, '1202901', 'Farhana Achmad', 'Ciseeng', '0812991019029', '2021-10-06'),
+(54, '1029019', 'Rani', 'Ciseeng', '0820391029', '2022-05-16');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pembayaran`
+-- Struktur dari tabel `tbl_pegawai`
+--
+
+CREATE TABLE `tbl_pegawai` (
+  `id` int(11) NOT NULL,
+  `nip` varchar(10) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `tahun_masuk` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tbl_pegawai`
+--
+
+INSERT INTO `tbl_pegawai` (`id`, `nip`, `nama`, `tahun_masuk`) VALUES
+(1, 'C3101', 'Munawar Ahmad', 2017),
+(2, 'C3107', 'Shinta Purnama', 2017),
+(3, 'D3901', 'Muneeb Ahmad', 2018),
+(4, 'D3908', 'Zakiyya Sidiqa', 2018),
+(5, 'D3531', 'Farhana Achmad', 2019),
+(6, 'D3492', 'Rani Khoerunnisa', 2019);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_pembayaran`
 --
 
 CREATE TABLE `tbl_pembayaran` (
@@ -1210,7 +1239,7 @@ CREATE TABLE `tbl_pembayaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_pembayaran`
+-- Dumping data untuk tabel `tbl_pembayaran`
 --
 
 INSERT INTO `tbl_pembayaran` (`no_invoice`, `tanggal_bayar`, `nim`, `nama`, `jumlah_bayar`) VALUES
@@ -1224,7 +1253,7 @@ INSERT INTO `tbl_pembayaran` (`no_invoice`, `tanggal_bayar`, `nim`, `nama`, `jum
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_provinsi`
+-- Struktur dari tabel `tbl_provinsi`
 --
 
 CREATE TABLE `tbl_provinsi` (
@@ -1233,7 +1262,7 @@ CREATE TABLE `tbl_provinsi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_provinsi`
+-- Dumping data untuk tabel `tbl_provinsi`
 --
 
 INSERT INTO `tbl_provinsi` (`id_prov`, `nama_prov`) VALUES
@@ -1243,7 +1272,7 @@ INSERT INTO `tbl_provinsi` (`id_prov`, `nama_prov`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_transaksi`
+-- Struktur dari tabel `tbl_transaksi`
 --
 
 CREATE TABLE `tbl_transaksi` (
@@ -1254,7 +1283,7 @@ CREATE TABLE `tbl_transaksi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tbl_transaksi`
+-- Dumping data untuk tabel `tbl_transaksi`
 --
 
 INSERT INTO `tbl_transaksi` (`id`, `no_transaksi`, `tanggal`, `keterangan`) VALUES
@@ -1264,7 +1293,7 @@ INSERT INTO `tbl_transaksi` (`id`, `no_transaksi`, `tanggal`, `keterangan`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_transaksi_d`
+-- Struktur dari tabel `tbl_transaksi_d`
 --
 
 CREATE TABLE `tbl_transaksi_d` (
@@ -1274,7 +1303,7 @@ CREATE TABLE `tbl_transaksi_d` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tbl_transaksi_d`
+-- Dumping data untuk tabel `tbl_transaksi_d`
 --
 
 INSERT INTO `tbl_transaksi_d` (`id`, `no_transaksi`, `item`) VALUES
@@ -1287,7 +1316,7 @@ INSERT INTO `tbl_transaksi_d` (`id`, `no_transaksi`, `item`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_user`
+-- Struktur dari tabel `tbl_user`
 --
 
 CREATE TABLE `tbl_user` (
@@ -1300,7 +1329,7 @@ CREATE TABLE `tbl_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_user`
+-- Dumping data untuk tabel `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`id`, `nama_lengkap`, `jenis_kelamin`, `username`, `password`, `level`) VALUES
@@ -1312,144 +1341,156 @@ INSERT INTO `tbl_user` (`id`, `nama_lengkap`, `jenis_kelamin`, `username`, `pass
 --
 
 --
--- Indexes for table `tbl_anggota`
+-- Indeks untuk tabel `tbl_anggota`
 --
 ALTER TABLE `tbl_anggota`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_barang`
+-- Indeks untuk tabel `tbl_barang`
 --
 ALTER TABLE `tbl_barang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_kabupaten`
+-- Indeks untuk tabel `tbl_kabupaten`
 --
 ALTER TABLE `tbl_kabupaten`
   ADD PRIMARY KEY (`id_kab`);
 
 --
--- Indexes for table `tbl_karyawan`
+-- Indeks untuk tabel `tbl_karyawan`
 --
 ALTER TABLE `tbl_karyawan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_kecamatan`
+-- Indeks untuk tabel `tbl_kecamatan`
 --
 ALTER TABLE `tbl_kecamatan`
   ADD PRIMARY KEY (`id_kec`);
 
 --
--- Indexes for table `tbl_member`
+-- Indeks untuk tabel `tbl_member`
 --
 ALTER TABLE `tbl_member`
   ADD PRIMARY KEY (`id`),
   ADD KEY `email` (`email`);
 
 --
--- Indexes for table `tbl_mhs`
+-- Indeks untuk tabel `tbl_mhs`
 --
 ALTER TABLE `tbl_mhs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_pembayaran`
+-- Indeks untuk tabel `tbl_pegawai`
+--
+ALTER TABLE `tbl_pegawai`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `tbl_pembayaran`
 --
 ALTER TABLE `tbl_pembayaran`
   ADD PRIMARY KEY (`no_invoice`);
 
 --
--- Indexes for table `tbl_provinsi`
+-- Indeks untuk tabel `tbl_provinsi`
 --
 ALTER TABLE `tbl_provinsi`
   ADD PRIMARY KEY (`id_prov`);
 
 --
--- Indexes for table `tbl_transaksi`
+-- Indeks untuk tabel `tbl_transaksi`
 --
 ALTER TABLE `tbl_transaksi`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `no_transaksi` (`no_transaksi`);
 
 --
--- Indexes for table `tbl_transaksi_d`
+-- Indeks untuk tabel `tbl_transaksi_d`
 --
 ALTER TABLE `tbl_transaksi_d`
   ADD PRIMARY KEY (`id`),
   ADD KEY `no_transaksi` (`no_transaksi`);
 
 --
--- Indexes for table `tbl_user`
+-- Indeks untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tbl_anggota`
+-- AUTO_INCREMENT untuk tabel `tbl_anggota`
 --
 ALTER TABLE `tbl_anggota`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `tbl_barang`
+-- AUTO_INCREMENT untuk tabel `tbl_barang`
 --
 ALTER TABLE `tbl_barang`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `tbl_karyawan`
+-- AUTO_INCREMENT untuk tabel `tbl_karyawan`
 --
 ALTER TABLE `tbl_karyawan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `tbl_member`
+-- AUTO_INCREMENT untuk tabel `tbl_member`
 --
 ALTER TABLE `tbl_member`
   MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
 
 --
--- AUTO_INCREMENT for table `tbl_mhs`
+-- AUTO_INCREMENT untuk tabel `tbl_mhs`
 --
 ALTER TABLE `tbl_mhs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
--- AUTO_INCREMENT for table `tbl_pembayaran`
+-- AUTO_INCREMENT untuk tabel `tbl_pegawai`
+--
+ALTER TABLE `tbl_pegawai`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_pembayaran`
 --
 ALTER TABLE `tbl_pembayaran`
   MODIFY `no_invoice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `tbl_transaksi`
+-- AUTO_INCREMENT untuk tabel `tbl_transaksi`
 --
 ALTER TABLE `tbl_transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `tbl_transaksi_d`
+-- AUTO_INCREMENT untuk tabel `tbl_transaksi_d`
 --
 ALTER TABLE `tbl_transaksi_d`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT for table `tbl_user`
+-- AUTO_INCREMENT untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `tbl_transaksi_d`
+-- Ketidakleluasaan untuk tabel `tbl_transaksi_d`
 --
 ALTER TABLE `tbl_transaksi_d`
   ADD CONSTRAINT `tbl_transaksi_d_ibfk_1` FOREIGN KEY (`no_transaksi`) REFERENCES `tbl_transaksi` (`no_transaksi`) ON DELETE CASCADE ON UPDATE CASCADE;

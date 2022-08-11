@@ -84,7 +84,7 @@
         var total = 0;
 
         $('#table_data tr').each(function(){
-          total += parseInt($(this).find('#bayar').text());
+          total += Number($(this).find('#bayar').text());
         });
 
         isNaN(total) ? $('#total').text(0) : $('#total').text(rubah(total));
@@ -96,3 +96,12 @@
     });
 
   </script>
+  
+  <!--  
+    simpan_transaksi
+
+    total
+    diskon
+    grandTotal
+    
+  -->

@@ -24,6 +24,10 @@
           
           <a href="<?php echo base_url().'export_excel/proses_excel' ?>" class="btn btn-success" style="margin-bottom: 5px;"><i class="fa fa-file-excel-o"></i> Export Excel</a>
 
+          <a href="<?php echo base_url().'export_excel/proses_phpexcel' ?>" class="btn btn-success" style="margin-bottom: 5px;"><i class="fa fa-file-excel-o"></i> Export PHPExcel</a>
+
+          <a href="<?php echo base_url().'export_excel/proses_phpspreadsheet' ?>" class="btn btn-success" style="margin-bottom: 5px;"><i class="fa fa-file-excel-o"></i> Export PHPSpreadsheet</a>
+
           <table class="table table-bordered">
             <thead>
               <tr class="bg-success">

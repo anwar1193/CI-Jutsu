@@ -13,7 +13,7 @@ class M_selectBerelasi extends CI_Model {
 
 	public function kabupaten($provId){
 
-		$kabupaten="<option value='0'>--pilih--</pilih>";
+		$kabupaten="<option value='0'>--pilih--</option>";
 
 		$this->db->order_by('nama_kab','ASC');
 		$kab = $this->db->get_where('tbl_kabupaten',array('id_prov'=>$provId));
@@ -28,7 +28,7 @@ class M_selectBerelasi extends CI_Model {
 
 	public function kecamatan($kabId){
 
-		$kecamatan="<option value='0'>--pilih--</pilih>";
+		$kecamatan="<option value='0'>--pilih--</option>";
 
 		$this->db->order_by('nama_kec','ASC');
 		$kec = $this->db->get_where('tbl_kecamatan',array('id_kab'=>$kabId));

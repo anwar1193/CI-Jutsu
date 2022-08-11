@@ -31,11 +31,11 @@ class Email extends CI_Controller {
 		date_default_timezone_set("Asia/Jakarta");
 		$config = array(
 			'protocol' => 'smtp',
-			'smtp_host' => 'smtp.gmail.com',
-			'smtp_crypto' => 'ssl',
-			'smtp_port' => 465,
-			'smtp_user' => 'procar.cashflow@gmail.com',
-			'smtp_pass' => 'Siryu007',
+			'smtp_host' => 'mail.procarfinance.com',
+			'smtp_crypto' => '',
+			'smtp_port' => 587,
+			'smtp_user' => 'munawar.ahmad@procarfinance.com',
+			'smtp_pass' => 'Profi@123',
 			'mailtype' => 'html',
 			'charset' => 'utf-8'
 		);
@@ -46,7 +46,7 @@ class Email extends CI_Controller {
 
 		$this->load->library('email', $config);
 		$this->email->set_newline("\r\n");
-		$this->email->from('procar.cashflow@gmail.com', 'Pro-Cashflow');
+		$this->email->from('munawar.ahmad@procarfinance.com', 'Pro-App');
 		$this->email->to($to);
 		$this->email->subject($subject);
 		$this->email->message($pesan);
