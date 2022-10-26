@@ -34,6 +34,39 @@
 
   <!-- Jquery UI CSS -->
   <link rel="stylesheet" href="<?php echo base_url().'asset/' ?>jquery-ui.css">
+
+  <!-- Loader Style -->
+  <style>
+    .loader{
+      height:100vh;
+      width:100vw;
+      overflow:hidden;
+      background-color: #16191e;
+      position:absolute;
+    }
+
+    .loader>div{
+      height:100px;
+      width:100px;
+      border:15px solid #45474b;
+      border-top-color: #2a88e6;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left:0;
+      right:0;
+      border-radius: 50%;
+      animation: spin 1.5s infinite linear;
+    }
+
+    @keyframes spin{
+      100%{
+        transform:rotate(360deg);
+      }
+    }
+  </style>
+  <!-- / Loader Style -->
   
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

@@ -86,6 +86,8 @@
         <li class="<?= $this->uri->segment(1)=='input_looping' ? 'active' : null ?>"><a href="<?php echo base_url().'input_looping' ?>"><i class="fa fa-list"></i> <span>Input Looping</span></a></li>
 
         <li class="<?= $this->uri->segment(1)=='live_search_combobox' ? 'active' : null ?>"><a href="<?php echo base_url().'live_search_combobox' ?>"><i class="fa fa-list-alt"></i> <span>Live Search ComboBox</span></a></li>
+
+        <li class="<?= $this->uri->segment(1)=='combobox_multiline' ? 'active' : null ?>"><a href="<?php echo base_url().'combobox_multiline' ?>"><i class="fa fa-list"></i> <span>Combobox Multiline</span></a></li>
         
         <li class="header">USER</li>
         <li><a href="<?php echo base_url().'login/logout' ?>"><i class="fa fa-times" style="color: red"></i> <span>Logout</span></a></li>
